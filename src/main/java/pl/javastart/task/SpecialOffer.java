@@ -5,17 +5,22 @@ public class SpecialOffer {
     Product product;
     String offerDescription;
     String validity;
-    double rabat;
+    double discount;
 
-    public SpecialOffer(Product product, String offerDescription, String validity, double rabat) {
+    public SpecialOffer(Product product, String offerDescription, String validity, double discount) {
         this.product = product;
         this.offerDescription = offerDescription;
         this.validity = validity;
-        this.rabat = rabat;
+        this.discount = discount;
     }
 
-    void makeRabat() {
-        product.price = product.price - product.price * rabat;
+    void makeDiscount() {
+
+        double priceAfterDiscount = product.price - product.price * 0.2;
+        System.out.println("\nInformacja o produkcie po zastosowaniu promocji");
+        System.out.println("Nazwa produktu: " + product.name + ", Opis produktu: "
+                + product.description + ", Cena produktu po zastosowaniu promocji: " + priceAfterDiscount);
+
     }
 
 }

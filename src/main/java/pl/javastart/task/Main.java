@@ -18,9 +18,7 @@ public class Main {
         product4.printInfo();
 
         SpecialOffer offer = new SpecialOffer(product1, "Obniżka ceny o 20%", "Obowiązuje od 03.10 do 23.10", 0.2);
-        offer.makeRabat();
-        System.out.println("\nInformacje o produkcie1 po rabacie: ");
-        product1.printInfo();
-
+        offer.makeDiscount();
+        
     }
 }
